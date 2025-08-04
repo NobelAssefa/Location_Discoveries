@@ -1,9 +1,9 @@
 const express = require('express')
-const {addLocation, getnearbyLocations} = require('../controller/location.controller')  
+const {addLocation, getNearbyLocations} = require('../controller/location.controller')  
 
 const router = express.Router();
 
 router.route('/').post(addLocation); 
-router.route('/').get(getnearbyLocations);
+router.route('/').get(getNearbyLocations);
 
 module.exports = router;

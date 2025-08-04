@@ -19,7 +19,7 @@ exports.addLocation = async (req, res) => {
 }
 
 
-exports.getnearbyLocations = async (req, res) => {
+exports.getNearbyLocations = async (req, res) => {
   try {
     const { longitude, latitude } = req.query;
 
@@ -41,6 +41,8 @@ exports.getnearbyLocations = async (req, res) => {
         }
       }
     });
+    console.log('trying to fetch locations', locations);
+    
 
     res.status(200).json({
       status: 'success',
